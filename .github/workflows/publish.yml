@@ -75,8 +75,6 @@ jobs:
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }} # Fallback if OIDC not yet configured; empty uses OIDC
 
   publish-to-testpypi:
     name: Publish Python distribution to TestPyPI
