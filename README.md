@@ -4,7 +4,10 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/tickertape-client.svg)](https://pypi.org/project/tickertape-client/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-An asynchronous, typed Python client and scraper for [TickerTape](https://www.tickertape.in) featuring persistent caching, Next.js hydration payload extraction, and a high-performance SQLite-backed ISIN lookup engine.
+An unofficial, asynchronous, typed Python SDK and client for [TickerTape](https://www.tickertape.in) featuring persistent caching, Next.js hydration payload extraction, and a high-performance SQLite-backed ISIN lookup engine.
+
+> [!NOTE]
+> **Disclaimer:** This project is an **unofficial** community SDK/client and is not affiliated with, endorsed by, sponsored by, or associated with TickerTape or its parent companies. All product names, logos, and brands are property of their respective owners.
 
 ---
 
@@ -14,9 +17,9 @@ An asynchronous, typed Python client and scraper for [TickerTape](https://www.ti
 - **Sitemap Discovery & Caching:** Automatic fetching, XML parsing (`<urlset>` and `<sitemapindex>`), and local JSON disk caching of TickerTape sitemaps.
 - **Deep Mutual Fund Extraction:** Parses Next.js SSR hydration payloads (`__NEXT_DATA__`) into typed Pydantic models with NAV, expense ratios, AUM, scorecard metrics, and AMC details.
 - **ISIN Resolution & Lookup Engine:**
-  - Fast, indexed SQLite database mapping mutual fund ISINs (e.g. `INF966L01721`) to TickerTape records.
-  - Targeted on-demand fuzzy resolver with candidate scoring and live verification.
-  - Query peer mutual funds and cluster schemes by sector, subsector, plan (`Direct`/`Regular`), option (`Growth`/`IDCW`), and benchmark.
+    - Fast, indexed SQLite database mapping mutual fund ISINs (e.g. `INF966L01721`) to TickerTape records.
+    - Targeted on-demand fuzzy resolver with candidate scoring and live verification.
+    - Query peer mutual funds and cluster schemes by sector, subsector, plan (`Direct`/`Regular`), option (`Growth`/`IDCW`), and benchmark.
 - **Resumable Bulk Indexer:** Crawl thousands of sitemap URLs with configurable concurrency, rate limiting, and progress tracking callbacks.
 - **Extensible Architecture:** Modular parser registry pattern (`BaseParser`, `register_parser`) with stubs for future asset types (stocks, ETFs, screens).
 - **Fully Typed:** Strict type hints and Pydantic v2 validation models.
@@ -81,13 +84,13 @@ if __name__ == "__main__":
 
 The [`examples/`](examples/) directory contains ready-to-run demonstration scripts for every feature:
 
-| Example Script | Description |
-| :--- | :--- |
-| [`examples/all_features_demo.py`](examples/all_features_demo.py) | **Complete Tour:** Runs through every single feature and function in one script. |
-| [`examples/01_basic_usage.py`](examples/01_basic_usage.py) | Client options, sitemap caching, fund extraction, raw props, error handling. |
-| [`examples/02_isin_lookup_and_peers.py`](examples/02_isin_lookup_and_peers.py) | Targeted ISIN resolution, SQLite CRUD/batch ops, peer clustering, filtering. |
-| [`examples/03_bulk_indexing_and_export.py`](examples/03_bulk_indexing_and_export.py) | Resumable bulk indexer with progress callback, exporting to JSON & CSV. |
-| [`examples/04_custom_parser.py`](examples/04_custom_parser.py) | Subclassing `BaseParser`, registry extension, custom data model extraction. |
+| Example Script                                                                       | Description                                                                      |
+| :----------------------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
+| [`examples/all_features_demo.py`](examples/all_features_demo.py)                     | **Complete Tour:** Runs through every single feature and function in one script. |
+| [`examples/01_basic_usage.py`](examples/01_basic_usage.py)                           | Client options, sitemap caching, fund extraction, raw props, error handling.     |
+| [`examples/02_isin_lookup_and_peers.py`](examples/02_isin_lookup_and_peers.py)       | Targeted ISIN resolution, SQLite CRUD/batch ops, peer clustering, filtering.     |
+| [`examples/03_bulk_indexing_and_export.py`](examples/03_bulk_indexing_and_export.py) | Resumable bulk indexer with progress callback, exporting to JSON & CSV.          |
+| [`examples/04_custom_parser.py`](examples/04_custom_parser.py)                       | Subclassing `BaseParser`, registry extension, custom data model extraction.      |
 
 Run any example directly with `uv`:
 
@@ -329,8 +332,37 @@ Build distributions:
 uv build
 ```
 
+Verify distribution metadata:
+
+```bash
+uvx twine check dist/*
+```
+
+---
+
+## Publishing to PyPI
+
+### Automated Releases via GitHub Actions
+This repository is configured with GitHub Actions to publish automatically when a GitHub Release is published, or manually via **Actions > Publish to PyPI**.
+See [PyPI Publishing Guide](docs/guides/pypi-publishing.md) for details on setting up PyPI Trusted Publishing (OIDC).
+
+### Manual Publishing via CLI
+```bash
+# Upload to TestPyPI
+uv publish --publish-url https://test.pypi.org/legacy/ --token <TEST_PYPI_TOKEN>
+
+# Upload to Production PyPI
+uv publish --token <PYPI_TOKEN>
+```
+
 ---
 
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE).
+
+---
+
+## Disclaimer
+
+This software is an unofficial, community-driven client library. It is neither created, maintained, endorsed, nor supported by TickerTape or its affiliates. Use this tool responsibly, in compliance with all applicable terms of service and rate limits.
