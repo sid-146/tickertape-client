@@ -1,6 +1,6 @@
 # ISIN Lookup & Peer Clustering
 
-Portfolio management tools (such as Folioman) and brokers identify mutual funds by their **ISIN** (International Securities Identification Number), e.g. `INF966L01721`. However, TickerTape uses URL slugs (e.g. `quant-infrastructure-fund-M_QUNG`).
+Portfolio management tools and brokers identify mutual funds by their **ISIN** (International Securities Identification Number), e.g. `INF966L01721`. However, TickerTape uses URL slugs (e.g. `quant-infrastructure-fund-M_QUNG`).
 
 `tickertape-client` provides a high-performance **SQLite Lookup Engine** and **Targeted On-Demand Resolver** to bridge this gap.
 
