@@ -1,0 +1,101 @@
+site_name: TickerTape Client
+site_description: Unofficial asynchronous typed Python client and scraper for TickerTape with persistent caching and ISIN lookup engine
+site_author: Sudhanwa
+site_url: https://folioman.github.io/tickertape-client/
+
+repo_name: folioman/tickertape-client
+repo_url: https://github.com/folioman/tickertape-client
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: true
+            show_signature_annotations: true
+            separate_signature: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+
+nav:
+  - Overview: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - User Guides:
+      - Client Configuration: guides/client-configuration.md
+      - Sitemaps & Caching: guides/sitemaps-and-caching.md
+      - Mutual Funds & SSR Data: guides/mutual-funds-data.md
+      - ISIN Lookup & Peer Clustering: guides/isin-lookup-and-peers.md
+      - Bulk Indexing & Exports: guides/bulk-indexing-and-export.md
+      - Custom Parsers & Extension: guides/custom-parsers.md
+      - PyPI Publishing: guides/pypi-publishing.md
+  - API Reference:
+      - Client: reference/client.md
+      - Resources: reference/resources.md
+      - Lookup Engine: reference/lookup.md
+      - Parsers: reference/parsers.md
+      - Data Models: reference/models.md
+      - Storage & Cache: reference/storage.md
+      - Errors & Constants: reference/errors-constants.md
+  - Contributing: contributing.md
