@@ -12,7 +12,7 @@
         <meta name="author" content="Sudhanwa">
       
       
-        <link rel="canonical" href="https://folioman.github.io/tickertape-client/guides/pypi-publishing/">
+        <link rel="canonical" href="https://sid-146.github.io/tickertape-client/guides/pypi-publishing/">
       
       
         <link rel="prev" href="../custom-parsers/">
@@ -205,13 +205,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/folioman/tickertape-client" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/sid-146/tickertape-client" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    folioman/tickertape-client
+    sid-146/tickertape-client
   </div>
 </a>
       </div>
@@ -362,13 +362,13 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/folioman/tickertape-client" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/sid-146/tickertape-client" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    folioman/tickertape-client
+    sid-146/tickertape-client
   </div>
 </a>
     </div>
@@ -1494,7 +1494,7 @@
 <p>This guide covers how <code>tickertape-client</code> is packaged, verified, and published to the <a href="https://pypi.org">Python Package Index (PyPI)</a>.</p>
 <hr />
 <h2 id="1-automated-publishing-via-github-actions">1. Automated Publishing via GitHub Actions<a class="headerlink" href="#1-automated-publishing-via-github-actions" title="Permanent link">&para;</a></h2>
-<p>The repository includes a production-ready publishing workflow at <a href="https://github.com/folioman/tickertape-client/blob/main/.github/workflows/publish.yml"><code>.github/workflows/publish.yml</code></a>.</p>
+<p>The repository includes a production-ready publishing workflow at <a href="https://github.com/sid-146/tickertape-client/blob/main/.github/workflows/publish.yml"><code>.github/workflows/publish.yml</code></a>.</p>
 <h3 id="method-a-pypi-trusted-publishing-recommended">Method A: PyPI Trusted Publishing (Recommended)<a class="headerlink" href="#method-a-pypi-trusted-publishing-recommended" title="Permanent link">&para;</a></h3>
 <p>PyPI supports <strong>Trusted Publishing (OIDC)</strong>, which eliminates the need to generate, store, or rotate manual API tokens. GitHub Actions authenticates directly with PyPI using short-lived OpenID Connect tokens.</p>
 <h4 id="setting-up-on-pypi">Setting up on PyPI:<a class="headerlink" href="#setting-up-on-pypi" title="Permanent link">&para;</a></h4>
@@ -1502,29 +1502,37 @@
 <li>Log in to <a href="https://pypi.org">pypi.org</a> (or <a href="https://test.pypi.org">test.pypi.org</a>).</li>
 <li>Go to <strong>Account Settings</strong> &gt; <strong>Publishing</strong>.</li>
 <li>Under <strong>Add a new publisher</strong>, select <strong>GitHub</strong>.</li>
-<li>Enter the repository details:</li>
-<li><strong>Owner:</strong> <code>folioman</code></li>
+<li>Enter the repository details:<ul>
+<li><strong>Owner:</strong> <code>sid-146</code></li>
 <li><strong>Repository name:</strong> <code>tickertape-client</code></li>
 <li><strong>Workflow name:</strong> <code>publish.yml</code></li>
 <li><strong>Environment name:</strong> <code>pypi</code> (or <code>testpypi</code> for TestPyPI)</li>
+</ul>
+</li>
 <li>Save the configuration.</li>
 </ol>
 <h4 id="setting-up-github-environments">Setting up GitHub Environments:<a class="headerlink" href="#setting-up-github-environments" title="Permanent link">&para;</a></h4>
 <ol>
 <li>In your GitHub repository, go to <strong>Settings</strong> &gt; <strong>Environments</strong>.</li>
-<li>Click <strong>New environment</strong> and create:</li>
+<li>Click <strong>New environment</strong> and create:<ul>
 <li><code>pypi</code></li>
 <li><code>testpypi</code></li>
+</ul>
+</li>
 <li>(Optional) Set protection rules (e.g. required reviewers) for the <code>pypi</code> environment.</li>
 </ol>
 <hr />
 <h3 id="method-b-api-token-secret-alternative-fallback">Method B: API Token Secret (Alternative Fallback)<a class="headerlink" href="#method-b-api-token-secret-alternative-fallback" title="Permanent link">&para;</a></h3>
-<p>If you prefer using traditional API tokens:
-1. Generate an API token on <a href="https://pypi.org/manage/account/token/">pypi.org</a> with upload permissions.
-2. In your GitHub repository, navigate to <strong>Settings</strong> &gt; <strong>Secrets and variables</strong> &gt; <strong>Actions</strong>.
-3. Add the following repository secrets:
-   - <code>PYPI_API_TOKEN</code>: <code>pypi-...</code>
-   - <code>TEST_PYPI_API_TOKEN</code>: <code>pypi-...</code> (if using TestPyPI)</p>
+<p>If you prefer using traditional API tokens:</p>
+<ol>
+<li>Generate an API token on <a href="https://pypi.org/manage/account/token/">pypi.org</a> with upload permissions.</li>
+<li>In your GitHub repository, navigate to <strong>Settings</strong> &gt; <strong>Secrets and variables</strong> &gt; <strong>Actions</strong>.</li>
+<li>Add the following repository secrets:<ul>
+<li><code>PYPI_API_TOKEN</code>: <code>pypi-...</code></li>
+<li><code>TEST_PYPI_API_TOKEN</code>: <code>pypi-...</code> (if using TestPyPI)</li>
+</ul>
+</li>
+</ol>
 <hr />
 <h2 id="2-triggering-a-release">2. Triggering a Release<a class="headerlink" href="#2-triggering-a-release" title="Permanent link">&para;</a></h2>
 <h3 id="automated-via-github-release">Automated via GitHub Release<a class="headerlink" href="#automated-via-github-release" title="Permanent link">&para;</a></h3>
@@ -1532,11 +1540,13 @@
 <li>Update the <code>version</code> string in <code>pyproject.toml</code> (e.g. <code>version = "0.1.0"</code>).</li>
 <li>Commit and push your changes to <code>main</code>.</li>
 <li>In GitHub, create a new Release with a tag matching your version (e.g. <code>v0.1.0</code>).</li>
-<li>Once you click <strong>Publish release</strong>, GitHub Actions will automatically:</li>
+<li>Once you click <strong>Publish release</strong>, GitHub Actions will automatically:<ul>
 <li>Run the test suite (<code>pytest</code>)</li>
 <li>Build source distributions (<code>.tar.gz</code>) and wheels (<code>.whl</code>)</li>
 <li>Verify package metadata with <code>twine check</code></li>
 <li>Securely publish to PyPI</li>
+</ul>
+</li>
 </ol>
 <h3 id="manual-trigger-via-github-ui-workflow_dispatch">Manual Trigger via GitHub UI (<code>workflow_dispatch</code>)<a class="headerlink" href="#manual-trigger-via-github-ui-workflow_dispatch" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1551,19 +1561,21 @@
 <h3 id="step-1-clean-and-build-distributions">Step 1: Clean and Build Distributions<a class="headerlink" href="#step-1-clean-and-build-distributions" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>build<span class="w"> </span>--clear
 </span></code></pre></div>
-<p>This outputs clean artifacts to <code>dist/</code>:
-- <code>dist/tickertape_client-&lt;version&gt;-py3-none-any.whl</code>
-- <code>dist/tickertape_client-&lt;version&gt;.tar.gz</code></p>
+<p>This outputs clean artifacts to <code>dist/</code>:</p>
+<ul>
+<li><code>dist/tickertape_client-&lt;version&gt;-py3-none-any.whl</code></li>
+<li><code>dist/tickertape_client-&lt;version&gt;.tar.gz</code></li>
+</ul>
 <h3 id="step-2-validate-metadata">Step 2: Validate Metadata<a class="headerlink" href="#step-2-validate-metadata" title="Permanent link">&para;</a></h3>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uvx<span class="w"> </span>twine<span class="w"> </span>check<span class="w"> </span>dist/*
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uvx<span class="w"> </span>twine<span class="w"> </span>check<span class="w"> </span>dist/*
 </span></code></pre></div>
-Ensure both checks output <code>PASSED</code>.</p>
+<p>Ensure both checks output <code>PASSED</code>.</p>
 <h3 id="step-3-test-upload-to-testpypi">Step 3: Test Upload to TestPyPI<a class="headerlink" href="#step-3-test-upload-to-testpypi" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>publish<span class="w"> </span>--publish-url<span class="w"> </span>https://test.pypi.org/legacy/<span class="w"> </span>--token<span class="w"> </span>&lt;TEST_PYPI_TOKEN&gt;
 </span></code></pre></div>
-<p>Verify your TestPyPI release by installing it into a fresh virtual environment:
+<p>Verify your TestPyPI release by installing it into a fresh virtual environment:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>--extra-index-url<span class="w"> </span>https://pypi.org/simple/<span class="w"> </span>tickertape-client
-</span></code></pre></div></p>
+</span></code></pre></div>
 <h3 id="step-4-publish-to-production-pypi">Step 4: Publish to Production PyPI<a class="headerlink" href="#step-4-publish-to-production-pypi" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>publish<span class="w"> </span>--token<span class="w"> </span>&lt;PYPI_TOKEN&gt;
 </span></code></pre></div>
