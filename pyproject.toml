@@ -41,6 +41,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/sid-146/tickertape-client"
+Documentation = "https://sid-146.github.io/tickertape-client/"
 Repository = "https://github.com/sid-146/tickertape-client"
 Issues = "https://github.com/sid-146/tickertape-client/issues"
 

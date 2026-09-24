@@ -7,15 +7,16 @@ Thank you for your interest in contributing to `tickertape-client`!
 ## Local Setup
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/folioman/tickertape-client.git
-   cd tickertape-client
-   ```
+
+    ```bash
+    git clone https://github.com/sid-146/tickertape-client.git
+    cd tickertape-client
+    ```
 
 2. **Install all dependencies (including dev and docs groups):**
-   ```bash
-   uv sync --all-groups
-   ```
+    ```bash
+    uv sync --all-groups
+    ```
 
 ---
 

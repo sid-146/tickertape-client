@@ -315,7 +315,7 @@ All models are built with Pydantic v2 and allow ignoring unrecognized extra attr
 Clone the repository and install dependencies with `uv`:
 
 ```bash
-git clone https://github.com/folioman/tickertape-client.git
+git clone https://github.com/sid-146/tickertape-client.git
 cd tickertape-client
 uv sync
 ```
@@ -343,10 +343,12 @@ uvx twine check dist/*
 ## Publishing to PyPI
 
 ### Automated Releases via GitHub Actions
+
 This repository is configured with GitHub Actions to publish automatically when a GitHub Release is published, or manually via **Actions > Publish to PyPI**.
 See [PyPI Publishing Guide](docs/guides/pypi-publishing.md) for details on setting up PyPI Trusted Publishing (OIDC).
 
 ### Manual Publishing via CLI
+
 ```bash
 # Upload to TestPyPI
 uv publish --publish-url https://test.pypi.org/legacy/ --token <TEST_PYPI_TOKEN>
