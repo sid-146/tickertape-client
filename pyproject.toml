@@ -1,0 +1,80 @@
+[project]
+name = "tickertape-client"
+version = "0.1.0"
+description = "Asynchronous typed Python client and scraper for TickerTape with persistent caching and ISIN lookup"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Sudhanwa", email = "sudhanwa.kaveeshwar@gmail.com" }
+]
+requires-python = ">=3.10"
+keywords = [
+    "tickertape",
+    "finance",
+    "mutual-funds",
+    "stocks",
+    "etf",
+    "investing",
+    "isin",
+    "scraper",
+    "asyncio",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "beautifulsoup4>=4.12.0",
+    "pytest>=9.1.1",
+    "black>=26.5.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/folioman/tickertape-client"
+Repository = "https://github.com/folioman/tickertape-client"
+Issues = "https://github.com/folioman/tickertape-client/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "respx>=0.21.0",
+    "pytest-cov>=4.0.0",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.7.7",
+    "mkdocstrings[python]>=1.0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "respx>=0.21.0",
+    "pytest-cov>=4.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tickertape"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
