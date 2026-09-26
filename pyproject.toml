@@ -1,6 +1,6 @@
 [project]
 name = "tickertape-client"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial asynchronous typed Python client and scraper for TickerTape with persistent caching and ISIN lookup"
 readme = "README.md"
 license = { text = "Apache-2.0" }
