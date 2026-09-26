@@ -88,6 +88,7 @@ nav:
           - Mutual Funds & SSR Data: guides/mutual-funds-data.md
           - ISIN Lookup & Peer Clustering: guides/isin-lookup-and-peers.md
           - Bulk Indexing & Exports: guides/bulk-indexing-and-export.md
+          - Cache Manager CLI: guides/cache-manager-cli.md
           - Custom Parsers & Extension: guides/custom-parsers.md
           - PyPI Publishing: guides/pypi-publishing.md
     - API Reference:
